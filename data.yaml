@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['car']
+
+roboflow:
+  workspace: spacedetection
+  project: my-first-project-wxj4y
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/spacedetection/my-first-project-wxj4y/dataset/3
