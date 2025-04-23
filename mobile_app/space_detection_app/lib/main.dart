@@ -2,27 +2,46 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // Thay đổi IP nếu cần (nếu chạy server trên máy khác hoặc cloud)
-  final String serverUrl = 'http://127.0.0.1:8000/'; // hoặc http://192.168.x.x:8000/
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Live Parking Stream',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Giám sát Bãi đỗ xe'),
-          backgroundColor: Colors.blueGrey,
-        ),
-        body: WebView(
-          initialUrl: serverUrl,
-          javascriptMode: JavascriptMode.unrestricted,
-        ),
-      ),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: WebViewScreen(),
+    );
+  }
+}
+
+class WebViewScreen extends StatefulWidget {
+  const WebViewScreen({super.key});
+
+  @override
+  State<WebViewScreen> createState() => _WebViewScreenState();
+}
+
+class _WebViewScreenState extends State<WebViewScreen> {
+  late final WebViewController _controller;
+
+  final String videoUrl = 'http://10.0.2.2:8000'; // 10.0.2.2 là địa chỉ localhost trong Android Emulator
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(Uri.parse(videoUrl));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Live Video')),
+      body: WebViewWidget(controller: _controller),
     );
   }
 }
