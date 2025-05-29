@@ -5,7 +5,7 @@ import cv2
 
 app = FastAPI()
 
-# Đường dẫn video, model YOLO và file JSON vùng đỗ xe
+# Đường dẫn video, model YOLO đã train và file JSON vùng đỗ xe
 video_path = "D:/spacedetection/space_detection/videos/yt1s.com - BLKHDPTZ12 Security Camera Parkng Lot Surveillance Video_360P.mp4"
 model_path = "D:/spacedetection/space_detection/best.pt"
 json_path = "D:/spacedetection/space_detection/parking_boxes.json"

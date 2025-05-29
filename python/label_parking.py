@@ -29,7 +29,7 @@ def save_to_json(filename="parking_boxes.json"):
     print(f"Saved {len(boxes)} boxes to {filename}")
 
 # Load ảnh nền
-image = cv2.imread("./sample_frames/frame_00.jpg")  # Thay tên ảnh của bạn
+image = cv2.imread("./sample_frames/frame_00.jpg")  
 clone = image.copy()
 
 cv2.namedWindow("Parking Label Tool")

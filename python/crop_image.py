@@ -2,7 +2,7 @@ import cv2
 import os
 
 # Mở video
-video_path = "./videos/yt1s.com - BLKHDPTZ12 Security Camera Parkng Lot Surveillance Video_360P.mp4"
+video_path = "./videos/videoplayback.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # Thư mục lưu ảnh
