@@ -1,4 +1,10 @@
+sử dụng dataset đã được dán nhãn bằng roboflow 
 
+
+re-trainning YOLOv8 với dataset và google colab, 
+
+
+download file best.pt để sử dụng model mới 
 
 
 
