@@ -1,6 +1,9 @@
 
 
-https://github.com/user-attachments/assets/ea7290a3-8a65-475e-aedf-bbb9c2ddbad1
+
+
+https://github.com/user-attachments/assets/d2bbfadd-571f-4d75-a57c-dfeb7e71a3e3
+
 
 đánh dấu các vị trí đỗ xe bằng file label_parking.py.
 
